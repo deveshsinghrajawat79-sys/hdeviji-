@@ -1,0 +1,1908 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#a984d8">
+<title>For My Bestie 💜</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"Poppins","Segoe UI",sans-serif;
+  color:#513b69;
+  background:
+    radial-gradient(circle at 20% 10%,#fff 0%,transparent 25%),
+    linear-gradient(135deg,#eee3ff,#d8c2f4,#b996e1);
+  overflow-x:hidden;
+}
+
+button{
+  font-family:inherit;
+}
+
+section{
+  position:relative;
+  z-index:2;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.bg{
+  position:fixed;
+  inset:0;
+  overflow:hidden;
+  pointer-events:none;
+  z-index:0;
+}
+
+.orb{
+  position:absolute;
+  border-radius:50%;
+  background:rgba(255,255,255,.17);
+  filter:blur(2px);
+  animation:orbFloat linear infinite;
+}
+
+.orb:nth-child(1){
+  width:120px;
+  height:120px;
+  left:5%;
+  bottom:-150px;
+  animation-duration:14s;
+}
+
+.orb:nth-child(2){
+  width:70px;
+  height:70px;
+  left:40%;
+  bottom:-100px;
+  animation-duration:11s;
+}
+
+.orb:nth-child(3){
+  width:160px;
+  height:160px;
+  right:3%;
+  bottom:-190px;
+  animation-duration:17s;
+}
+
+@keyframes orbFloat{
+  0%{
+    transform:translateY(0);
+    opacity:0;
+  }
+  20%{
+    opacity:.7;
+  }
+  100%{
+    transform:translateY(-120vh);
+    opacity:0;
+  }
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:25px 15px;
+}
+
+.hero-card{
+  width:100%;
+  max-width:950px;
+  text-align:center;
+  padding:40px 25px;
+  border-radius:40px;
+  background:rgba(255,255,255,.28);
+  border:1px solid rgba(255,255,255,.55);
+  backdrop-filter:blur(20px);
+  box-shadow:0 30px 80px rgba(75,45,110,.22);
+}
+
+.badge{
+  display:inline-block;
+  padding:8px 17px;
+  border-radius:50px;
+  background:rgba(255,255,255,.4);
+  color:#765296;
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+
+h1{
+  font-size:clamp(2.7rem,10vw,6rem);
+  line-height:.95;
+  color:#65458a;
+  margin-bottom:15px;
+}
+
+.gradient-text{
+  color:#a06fd0;
+  text-shadow:0 0 20px rgba(255,255,255,.6);
+}
+
+.hero-sub{
+  font-size:clamp(15px,3vw,20px);
+  margin-bottom:20px;
+}
+
+/* =========================
+   TEDDY
+========================= */
+
+.teddy-area{
+  height:280px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.teddy{
+  width:160px;
+  height:185px;
+  position:relative;
+  cursor:pointer;
+  animation:teddyFloat 3s ease-in-out infinite;
+  transition:.3s;
+}
+
+.teddy:hover{
+  transform:scale(1.08);
+}
+
+@keyframes teddyFloat{
+  0%,100%{
+    transform:translateY(0) rotate(-2deg);
+  }
+  50%{
+    transform:translateY(-18px) rotate(2deg);
+  }
+}
+
+.ear{
+  position:absolute;
+  width:57px;
+  height:57px;
+  top:2px;
+  border-radius:50%;
+  background:#bd8069;
+}
+
+.ear:after{
+  content:"";
+  position:absolute;
+  width:31px;
+  height:31px;
+  top:13px;
+  left:13px;
+  border-radius:50%;
+  background:#e7aa93;
+}
+
+.ear.left{left:2px}
+.ear.right{right:2px}
+
+.head{
+  position:absolute;
+  width:128px;
+  height:116px;
+  left:16px;
+  top:27px;
+  border-radius:50%;
+  background:#c98b71;
+  z-index:2;
+  box-shadow:inset -8px -10px rgba(80,40,30,.1);
+}
+
+.eye{
+  position:absolute;
+  width:11px;
+  height:14px;
+  top:48px;
+  background:#39241e;
+  border-radius:50%;
+}
+
+.eye.left{left:34px}
+.eye.right{right:34px}
+
+.eye:after{
+  content:"";
+  position:absolute;
+  width:4px;
+  height:4px;
+  top:2px;
+  left:2px;
+  background:white;
+  border-radius:50%;
+}
+
+.muzzle{
+  position:absolute;
+  width:63px;
+  height:48px;
+  left:32px;
+  top:62px;
+  background:#e8b39b;
+  border-radius:50%;
+}
+
+.nose{
+  position:absolute;
+  width:17px;
+  height:13px;
+  top:9px;
+  left:23px;
+  background:#492a24;
+  border-radius:50%;
+}
+
+.mouth{
+  position:absolute;
+  width:20px;
+  height:12px;
+  top:20px;
+  left:21px;
+  border-bottom:3px solid #492a24;
+  border-radius:50%;
+}
+
+.body{
+  position:absolute;
+  width:107px;
+  height:105px;
+  top:106px;
+  left:26px;
+  border-radius:48%;
+  background:#b97961;
+  z-index:1;
+}
+
+.belly{
+  position:absolute;
+  width:68px;
+  height:59px;
+  left:20px;
+  top:22px;
+  border-radius:50%;
+  background:#e4ad95;
+}
+
+.arm{
+  position:absolute;
+  width:44px;
+  height:75px;
+  top:116px;
+  background:#bb7d64;
+  border-radius:50%;
+}
+
+.arm.left{
+  left:4px;
+  transform:rotate(25deg);
+}
+
+.arm.right{
+  right:4px;
+  transform:rotate(-25deg);
+}
+
+.leg{
+  position:absolute;
+  width:49px;
+  height:40px;
+  bottom:-17px;
+  border-radius:50%;
+  background:#b97961;
+}
+
+.leg.left{left:15px}
+.leg.right{right:15px}
+
+.teddy-heart{
+  position:absolute;
+  right:-20px;
+  top:25px;
+  font-size:45px;
+  z-index:5;
+  animation:heartBeat 1.2s infinite;
+}
+
+@keyframes heartBeat{
+  50%{transform:scale(1.25)}
+}
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown{
+  max-width:650px;
+  margin:0 auto 25px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+}
+
+.time{
+  padding:15px 5px;
+  border-radius:20px;
+  background:rgba(255,255,255,.4);
+}
+
+.time strong{
+  display:block;
+  font-size:clamp(1.5rem,6vw,2.5rem);
+  color:#68478b;
+}
+
+.time span{
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn{
+  border:none;
+  padding:13px 22px;
+  border-radius:50px;
+  background:linear-gradient(135deg,#9a6bc9,#bd8de5);
+  color:white;
+  font-weight:700;
+  cursor:pointer;
+  box-shadow:0 10px 25px rgba(104,68,140,.25);
+  transition:.25s;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+}
+
+.btn:active{
+  transform:scale(.95);
+}
+
+.btn.secondary{
+  background:rgba(255,255,255,.45);
+  color:#694c84;
+}
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.content{
+  max-width:950px;
+  margin:auto;
+  padding:70px 15px;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:35px;
+}
+
+.section-title h2{
+  font-size:clamp(2rem,7vw,3.5rem);
+  color:#65458a;
+}
+
+.section-title p{
+  margin-top:8px;
+}
+
+/* =========================
+   SPECIAL CARDS
+========================= */
+
+.reason-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.reason{
+  min-height:190px;
+  padding:25px 18px;
+  border-radius:25px;
+  background:rgba(255,255,255,.34);
+  border:1px solid rgba(255,255,255,.45);
+  backdrop-filter:blur(12px);
+  cursor:pointer;
+  text-align:center;
+  transition:.35s;
+}
+
+.reason:hover{
+  transform:translateY(-8px) rotate(1deg);
+}
+
+.reason-icon{
+  font-size:40px;
+  margin-bottom:12px;
+}
+
+.reason h3{
+  color:#725096;
+  margin-bottom:8px;
+}
+
+.reason p{
+  font-size:14px;
+  line-height:1.6;
+}
+
+/* =========================
+   GIFT
+========================= */
+
+.gift-area{
+  text-align:center;
+  padding:20px;
+}
+
+.gift{
+  width:150px;
+  height:130px;
+  margin:25px auto;
+  position:relative;
+  cursor:pointer;
+  transition:.5s;
+}
+
+.gift-box{
+  position:absolute;
+  width:150px;
+  height:100px;
+  bottom:0;
+  border-radius:10px;
+  background:#b47bd4;
+  box-shadow:0 15px 30px rgba(70,40,100,.2);
+}
+
+.gift-box:after{
+  content:"";
+  position:absolute;
+  width:25px;
+  height:100%;
+  left:62px;
+  background:#efd8ff;
+}
+
+.gift-lid{
+  position:absolute;
+  width:165px;
+  height:28px;
+  top:18px;
+  left:-7px;
+  border-radius:9px;
+  background:#9d64c4;
+  z-index:3;
+  transition:.7s;
+}
+
+.gift-lid:after{
+  content:"";
+  position:absolute;
+  width:25px;
+  height:28px;
+  left:70px;
+  background:#efd8ff;
+}
+
+.gift-ribbon{
+  position:absolute;
+  width:45px;
+  height:25px;
+  left:53px;
+  top:0;
+  z-index:4;
+}
+
+.gift-ribbon:before,
+.gift-ribbon:after{
+  content:"";
+  position:absolute;
+  width:35px;
+  height:20px;
+  border:6px solid #efd8ff;
+  border-radius:50%;
+}
+
+.gift-ribbon:before{
+  left:-18px;
+  transform:rotate(-25deg);
+}
+
+.gift-ribbon:after{
+  right:-18px;
+  transform:rotate(25deg);
+}
+
+.gift.open .gift-lid{
+  transform:translateY(-80px) rotate(-8deg);
+}
+
+.gift-message{
+  display:none;
+  max-width:500px;
+  margin:20px auto;
+  padding:25px;
+  border-radius:25px;
+  background:rgba(255,255,255,.45);
+  animation:pop .5s ease;
+}
+
+.gift-message.show{
+  display:block;
+}
+
+@keyframes pop{
+  from{transform:scale(.7);opacity:0}
+  to{transform:scale(1);opacity:1}
+}
+
+/* =========================
+   BESTIE METER
+========================= */
+
+.meter-card{
+  max-width:600px;
+  margin:auto;
+  padding:30px;
+  text-align:center;
+  border-radius:30px;
+  background:rgba(255,255,255,.35);
+}
+
+.meter{
+  height:25px;
+  border-radius:50px;
+  background:rgba(255,255,255,.5);
+  overflow:hidden;
+  margin:20px 0;
+}
+
+.meter-fill{
+  height:100%;
+  width:0;
+  border-radius:50px;
+  background:linear-gradient(90deg,#a06bd1,#e1a9f6);
+  transition:2s;
+}
+
+.meter-number{
+  font-size:45px;
+  font-weight:bold;
+  color:#8054a3;
+}
+
+/* =========================
+   MEMORY
+========================= */
+
+.memory-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.memory{
+  height:200px;
+  border-radius:22px;
+  overflow:hidden;
+  position:relative;
+  background:linear-gradient(135deg,#d8c2f4,#b68add);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:60px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.memory:hover{
+  transform:scale(1.03);
+}
+
+.memory-label{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  padding:12px;
+  background:rgba(50,30,70,.55);
+  color:white;
+  font-size:13px;
+}
+
+/* =========================
+   BALLOON GAME
+========================= */
+
+.game{
+  position:relative;
+  height:420px;
+  overflow:hidden;
+  border-radius:30px;
+  background:rgba(255,255,255,.25);
+}
+
+.balloon{
+  position:absolute;
+  bottom:-100px;
+  width:55px;
+  height:70px;
+  border-radius:50% 50% 45% 45%;
+  cursor:pointer;
+  animation:balloonUp linear forwards;
+  user-select:none;
+}
+
+.balloon:after{
+  content:"";
+  position:absolute;
+  width:2px;
+  height:65px;
+  top:65px;
+  left:50%;
+  background:#705278;
+}
+
+@keyframes balloonUp{
+  to{
+    transform:translateY(-550px);
+  }
+}
+
+.game-score{
+  text-align:center;
+  margin-bottom:15px;
+  font-size:18px;
+  font-weight:bold;
+}
+
+/* =========================
+   SECRET LETTER
+========================= */
+
+.letter-wrap{
+  text-align:center;
+}
+
+.envelope{
+  width:280px;
+  height:180px;
+  margin:30px auto;
+  position:relative;
+  cursor:pointer;
+  perspective:800px;
+}
+
+.envelope-body{
+  position:absolute;
+  inset:0;
+  background:#e7c9f7;
+  border-radius:12px;
+  box-shadow:0 20px 35px rgba(70,40,100,.2);
+}
+
+.flap{
+  position:absolute;
+  left:0;
+  top:0;
+  width:0;
+  height:0;
+  border-left:140px solid transparent;
+  border-right:140px solid transparent;
+  border-top:105px solid #c99be6;
+  transform-origin:top;
+  transition:.8s;
+  z-index:3;
+}
+
+.letter{
+  position:absolute;
+  width:235px;
+  height:150px;
+  left:22px;
+  top:15px;
+  background:#fff9ff;
+  padding:20px;
+  border-radius:10px;
+  transition:.8s;
+  z-index:2;
+  overflow:hidden;
+  font-size:13px;
+  line-height:1.6;
+}
+
+.envelope.open .flap{
+  transform:rotateX(180deg);
+}
+
+.envelope.open .letter{
+  transform:translateY(-105px);
+  height:240px;
+  z-index:4;
+}
+
+/* =========================
+   MUSIC
+========================= */
+
+.music-btn{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:50;
+  width:52px;
+  height:52px;
+  border:none;
+  border-radius:50%;
+  background:#9468c2;
+  color:white;
+  font-size:20px;
+  cursor:pointer;
+  box-shadow:0 10px 25px rgba(70,40,100,.3);
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final{
+  min-height:80vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:60px 15px;
+}
+
+.final-card{
+  max-width:700px;
+  padding:45px 25px;
+  border-radius:35px;
+  background:rgba(255,255,255,.4);
+  box-shadow:0 25px 70px rgba(70,40,100,.2);
+}
+
+.final-card h2{
+  font-size:clamp(2.5rem,9vw,5rem);
+  color:#76509c;
+}
+
+.final-card p{
+  line-height:1.8;
+  margin:20px 0;
+}
+
+/* =========================
+   FLOATING EMOJIS
+========================= */
+
+.float{
+  position:fixed;
+  bottom:-50px;
+  z-index:100;
+  pointer-events:none;
+  animation:rise 5s linear forwards;
+}
+
+@keyframes rise{
+  0%{
+    opacity:0;
+    transform:translateY(0) scale(.5) rotate(0);
+  }
+  15%{
+    opacity:1;
+  }
+  100%{
+    opacity:0;
+    transform:translateY(-110vh) scale(1.4) rotate(360deg);
+  }
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal{
+  position:fixed;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  background:rgba(40,20,60,.55);
+  backdrop-filter:blur(10px);
+  z-index:200;
+}
+
+.modal.show{
+  display:flex;
+}
+
+.modal-box{
+  max-width:450px;
+  width:100%;
+  padding:35px 25px;
+  text-align:center;
+  background:#fbf5ff;
+  border-radius:30px;
+  animation:pop .4s ease;
+}
+
+.modal-box h2{
+  color:#76509b;
+  margin:12px 0;
+}
+
+.modal-box p{
+  line-height:1.7;
+  margin-bottom:20px;
+}
+
+/* =========================
+   BIRTHDAY MODE
+========================= */
+
+.birthday-mode{
+  position:fixed;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:500;
+  background:linear-gradient(135deg,#a87bd0,#e5c4ff,#b78ce2);
+  text-align:center;
+  padding:20px;
+}
+
+.birthday-mode.show{
+  display:flex;
+  animation:fadeIn .7s;
+}
+
+.birthday-box{
+  color:white;
+}
+
+.birthday-box .cake{
+  font-size:100px;
+  animation:cakeBounce 1s infinite;
+}
+
+.birthday-box h2{
+  font-size:clamp(3rem,12vw,7rem);
+  line-height:1;
+}
+
+@keyframes cakeBounce{
+  50%{transform:translateY(-15px) rotate(3deg)}
+}
+
+@keyframes fadeIn{
+  from{opacity:0}
+  to{opacity:1}
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:650px){
+
+  .hero-card{
+    padding:30px 15px;
+    border-radius:30px;
+  }
+
+  .teddy-area{
+    height:230px;
+  }
+
+  .countdown{
+    gap:6px;
+  }
+
+  .time{
+    padding:12px 3px;
+    border-radius:15px;
+  }
+
+  .time strong{
+    font-size:1.4rem;
+  }
+
+  .time span{
+    font-size:8px;
+  }
+
+  .reason-grid,
+  .memory-grid{
+    grid-template-columns:1fr;
+  }
+
+  .reason{
+    min-height:auto;
+  }
+
+  .memory{
+    height:230px;
+  }
+
+  .game{
+    height:380px;
+  }
+
+  .envelope{
+    transform:scale(.85);
+    margin:15px auto;
+  }
+}
+
+@media(max-width:360px){
+
+  h1{
+    font-size:2.4rem;
+  }
+
+  .teddy{
+    transform:scale(.88);
+  }
+
+  .hero{
+    padding:12px 8px;
+  }
+
+  .countdown{
+    gap:3px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     BACKGROUND
+========================= -->
+
+<div class="bg">
+  <div class="orb"></div>
+  <div class="orb"></div>
+  <div class="orb"></div>
+</div>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+  <div class="hero-card">
+
+    <div class="badge">A little surprise for my bestie 💜</div>
+
+    <h1>
+      Birthday<br>
+      <span class="gradient-text">Coming Soon ✨</span>
+    </h1>
+
+    <p class="hero-sub">
+      The countdown to your special day has officially started 🧸
+    </p>
+
+
+    <div class="teddy-area">
+
+      <div class="teddy" id="teddy" onclick="teddyReaction()">
+
+        <div class="ear left"></div>
+        <div class="ear right"></div>
+
+        <div class="head">
+          <div class="eye left"></div>
+          <div class="eye right"></div>
+
+          <div class="muzzle">
+            <div class="nose"></div>
+            <div class="mouth"></div>
+          </div>
+        </div>
+
+        <div class="arm left"></div>
+        <div class="arm right"></div>
+
+        <div class="body">
+          <div class="belly"></div>
+        </div>
+
+        <div class="leg left"></div>
+        <div class="leg right"></div>
+
+        <div class="teddy-heart">💜</div>
+
+      </div>
+
+    </div>
+
+
+    <!-- COUNTDOWN -->
+
+    <div class="countdown">
+
+      <div class="time">
+        <strong id="days">00</strong>
+        <span>Days</span>
+      </div>
+
+      <div class="time">
+        <strong id="hours">00</strong>
+        <span>Hours</span>
+      </div>
+
+      <div class="time">
+        <strong id="minutes">00</strong>
+        <span>Minutes</span>
+      </div>
+
+      <div class="time">
+        <strong id="seconds">00</strong>
+        <span>Seconds</span>
+      </div>
+
+    </div>
+
+
+    <button class="btn" onclick="showModal(
+      '🧸 Teddy says...',
+      'Hey bestie! I am keeping your birthday seat reserved. No escaping the celebrations! 💜🎂'
+    )">
+      🧸 Talk to Teddy
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     WHY YOU ARE SPECIAL
+========================= -->
+
+<section class="content">
+
+  <div class="section-title">
+    <h2>Why You're Special 💜</h2>
+    <p>Tap the cards and discover your bestie powers ✨</p>
+  </div>
+
+  <div class="reason-grid">
+
+    <div class="reason" onclick="showModal(
+      '🌸 Your Smile',
+      'Your smile can turn an ordinary moment into a memory worth keeping forever.'
+    )">
+      <div class="reason-icon">🌸</div>
+      <h3>Your Smile</h3>
+      <p>There is something magical about it.</p>
+    </div>
+
+    <div class="reason" onclick="showModal(
+      '🫶 Your Heart',
+      'You care deeply, love honestly and somehow make people feel comfortable being themselves.'
+    )">
+      <div class="reason-icon">🫶</div>
+      <h3>Your Heart</h3>
+      <p>Pure, kind and impossible to replace.</p>
+    </div>
+
+    <div class="reason" onclick="showModal(
+      '✨ Your Vibe',
+      'Life is simply more fun when you are around. Never change that beautiful energy.'
+    )">
+      <div class="reason-icon">✨</div>
+      <h3>Your Vibe</h3>
+      <p>You make everything more fun.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     GIFT
+========================= -->
+
+<section class="content">
+
+  <div class="section-title">
+    <h2>There Is A Gift... 🎁</h2>
+    <p>But you have to open it yourself 👀</p>
+  </div>
+
+  <div class="gift-area">
+
+    <div class="gift" id="gift" onclick="openGift()">
+
+      <div class="gift-lid"></div>
+      <div class="gift-ribbon"></div>
+      <div class="gift-box"></div>
+
+    </div>
+
+    <div class="gift-message" id="giftMessage">
+
+      <h2>🎉 SURPRISE!</h2>
+
+      <p>
+        Your actual gift may still be loading...
+        but one thing is already guaranteed:
+        <br><br>
+        <strong>You are loved more than you know. 💜</strong>
+        <br><br>
+        And yes, you deserve cake too. 🎂
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     BESTIE METER
+========================= -->
+
+<section class="content">
+
+  <div class="section-title">
+    <h2>Bestie Meter 💖</h2>
+    <p>Let's see how strong this friendship is...</p>
+  </div>
+
+  <div class="meter-card">
+
+    <div class="meter-number" id="meterNumber">0%</div>
+
+    <div class="meter">
+      <div class="meter-fill" id="meterFill"></div>
+    </div>
+
+    <button class="btn" onclick="startMeter()">
+      💜 Calculate Bestie Level
+    </button>
+
+    <p id="meterText" style="margin-top:18px;">
+      Press the button... if you dare 😌
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     MEMORIES
+========================= -->
+
+<section class="content">
+
+  <div class="section-title">
+    <h2>Little Memories 📸</h2>
+    <p>Replace these with your real photos later 💜</p>
+  </div>
+
+  <div class="memory-grid">
+
+    <div class="memory" onclick="showModal(
+      '📸 Memory One',
+      'One of those moments that deserves to be remembered forever.'
+    )">
+      🧸
+      <div class="memory-label">Our silly moments 😂</div>
+    </div>
+
+    <div class="memory" onclick="showModal(
+      '📸 Memory Two',
+      'Some memories are small but somehow become the biggest ones in our hearts.'
+    )">
+      💜
+      <div class="memory-label">Bestie energy ✨</div>
+    </div>
+
+    <div class="memory" onclick="showModal(
+      '📸 Memory Three',
+      'Here is to all the memories we have made and all the ones still waiting for us.'
+    )">
+      🌸
+      <div class="memory-label">More adventures ahead 🌈</div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     BALLOON GAME
+========================= -->
+
+<section class="content">
+
+  <div class="section-title">
+    <h2>Pop The Birthday Balloons 🎈</h2>
+    <p>Pop them before they disappear!</p>
+  </div>
+
+  <div class="game-score">
+    Balloons popped: <span id="score">0</span> 🎈
+  </div>
+
+  <div class="game" id="game"></div>
+
+</section>
+
+
+<!-- =========================
+     SECRET LETTER
+========================= -->
+
+<section class="content">
+
+  <div class="section-title">
+    <h2>A Secret Letter 💌</h2>
+    <p>Tap the envelope...</p>
+  </div>
+
+  <div class="letter-wrap">
+
+    <div class="envelope" id="envelope" onclick="openLetter()">
+
+      <div class="envelope-body"></div>
+
+      <div class="letter">
+        <strong>Dear Bestie,</strong>
+        <br><br>
+
+        I don't say it enough, but having you in my life
+        makes ordinary days feel a little more special.
+        <br><br>
+
+        I hope this next chapter brings you happiness,
+        laughter, adventures and everything your heart wants.
+        <br><br>
+
+        Never forget how amazing you are.
+        <br><br>
+
+        Happy almost-birthday! 🧸💜
+        <br><br>
+
+        — Your forever bestie ✨
+      </div>
+
+      <div class="flap"></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FINAL
+========================= -->
+
+<section class="final">
+
+  <div class="final-card">
+
+    <div style="font-size:65px;">🧸💜🎂✨</div>
+
+    <h2>11 October</h2>
+
+    <p>
+      One date.<br>
+      One amazing person.<br>
+      A million reasons to celebrate.
+    </p>
+
+    <button class="btn" onclick="celebrate()">
+      🎉 Start The Celebration
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     MUSIC
+========================= -->
+
+<button class="music-btn" id="musicBtn" onclick="toggleMusic()">
+  🔇
+</button>
+
+<!-- Browser-friendly generated melody -->
+<audio id="music" loop>
+  <source
+    src="https://cdn.pixabay.com/audio/2022/10/30/audio_946a8b0f76.mp3"
+    type="audio/mpeg">
+</audio>
+
+
+<!-- =========================
+     MODAL
+========================= -->
+
+<div class="modal" id="modal">
+
+  <div class="modal-box">
+
+    <div style="font-size:50px;">💜✨</div>
+
+    <h2 id="modalTitle"></h2>
+
+    <p id="modalText"></p>
+
+    <button class="btn" onclick="closeModal()">
+      Aww 🥹💜
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- =========================
+     BIRTHDAY MODE
+========================= -->
+
+<div class="birthday-mode" id="birthdayMode">
+
+  <div class="birthday-box">
+
+    <div class="cake">🎂</div>
+
+    <h2>
+      HAPPY<br>
+      BIRTHDAY! 💜
+    </h2>
+
+    <p style="font-size:20px;margin:20px 0;">
+      Today is officially YOUR day! 🎉
+    </p>
+
+    <button class="btn" onclick="closeBirthdayMode()">
+      💜 Keep Celebrating
+    </button>
+
+  </div>
+
+</div>
+
+
+<script>
+
+/* ==========================================
+   SETTINGS
+========================================== */
+
+/*
+  Birthday is automatically set to
+  11 October.
+
+  To add your bestie's name, change:
+  BESTIE_NAME
+*/
+
+const BESTIE_NAME = "Bestie";
+
+
+/* ==========================================
+   COUNTDOWN
+========================================== */
+
+function getBirthday(){
+
+  const now = new Date();
+
+  let year = now.getFullYear();
+
+  let birthday = new Date(
+    year,
+    9,
+    11,
+    0,
+    0,
+    0
+  );
+
+  if(now >= birthday){
+    birthday = new Date(
+      year + 1,
+      9,
+      11,
+      0,
+      0,
+      0
+    );
+  }
+
+  return birthday;
+}
+
+
+function updateCountdown(){
+
+  const now = new Date();
+  const birthday = getBirthday();
+
+  const diff = birthday - now;
+
+  if(diff <= 0){
+    showBirthdayMode();
+    return;
+  }
+
+  const days = Math.floor(
+    diff / (1000 * 60 * 60 * 24)
+  );
+
+  const hours = Math.floor(
+    (diff / (1000 * 60 * 60)) % 24
+  );
+
+  const minutes = Math.floor(
+    (diff / (1000 * 60)) % 60
+  );
+
+  const seconds = Math.floor(
+    (diff / 1000) % 60
+  );
+
+  document.getElementById("days").textContent =
+    String(days).padStart(2,"0");
+
+  document.getElementById("hours").textContent =
+    String(hours).padStart(2,"0");
+
+  document.getElementById("minutes").textContent =
+    String(minutes).padStart(2,"0");
+
+  document.getElementById("seconds").textContent =
+    String(seconds).padStart(2,"0");
+}
+
+updateCountdown();
+
+setInterval(updateCountdown,1000);
+
+
+/* ==========================================
+   FLOATING EMOJIS
+========================================== */
+
+const floatingEmojis = [
+  "💜",
+  "💗",
+  "💖",
+  "✨",
+  "🌸",
+  "🧸",
+  "🎀"
+];
+
+
+function floatEmoji(){
+
+  const item = document.createElement("div");
+
+  item.className = "float";
+
+  item.textContent =
+    floatingEmojis[
+      Math.floor(
+        Math.random()*floatingEmojis.length
+      )
+    ];
+
+  item.style.left =
+    Math.random()*100 + "vw";
+
+  item.style.fontSize =
+    (15 + Math.random()*20) + "px";
+
+  item.style.animationDuration =
+    (4 + Math.random()*3) + "s";
+
+  document.body.appendChild(item);
+
+  setTimeout(()=>{
+    item.remove();
+  },7000);
+}
+
+setInterval(floatEmoji,700);
+
+
+/* ==========================================
+   TEDDY
+========================================== */
+
+const teddyMessages = [
+  "You clicked me! 🧸💜",
+  "Bestie detected! 🚨💖",
+  "You are officially adorable. ✨",
+  "11 October is getting closer! 🎂",
+  "Sending you a teddy hug! 🧸🫶"
+];
+
+let teddyIndex = 0;
+
+function teddyReaction(){
+
+  const teddy =
+    document.getElementById("teddy");
+
+  teddy.style.animation =
+    "none";
+
+  setTimeout(()=>{
+    teddy.style.animation =
+      "teddyFloat .7s ease-in-out 3";
+  },10);
+
+  showModal(
+    "🧸 Teddy says...",
+    teddyMessages[teddyIndex]
+  );
+
+  teddyIndex++;
+
+  if(teddyIndex >= teddyMessages.length){
+    teddyIndex = 0;
+  }
+
+  for(let i=0;i<8;i++){
+    setTimeout(floatEmoji,i*70);
+  }
+}
+
+
+/* ==========================================
+   GIFT
+========================================== */
+
+function openGift(){
+
+  const gift =
+    document.getElementById("gift");
+
+  const message =
+    document.getElementById("giftMessage");
+
+  gift.classList.toggle("open");
+
+  message.classList.toggle("show");
+
+  if(message.classList.contains("show")){
+
+    for(let i=0;i<15;i++){
+      setTimeout(floatEmoji,i*60);
+    }
+
+  }
+}
+
+
+/* ==========================================
+   BESTIE METER
+========================================== */
+
+function startMeter(){
+
+  const fill =
+    document.getElementById("meterFill");
+
+  const number =
+    document.getElementById("meterNumber");
+
+  const text =
+    document.getElementById("meterText");
+
+  let value = 0;
+
+  fill.style.width = "0%";
+
+  const interval =
+    setInterval(()=>{
+
+      value += 2;
+
+      number.textContent =
+        value + "%";
+
+      fill.style.width =
+        value + "%";
+
+      if(value >= 100){
+
+        clearInterval(interval);
+
+        text.innerHTML =
+          "💜 <strong>100% BESTIE LEVEL!</strong><br>" +
+          "Friendship status: absolutely unbreakable. 🧸✨";
+
+        for(let i=0;i<25;i++){
+          setTimeout(floatEmoji,i*50);
+        }
+      }
+
+    },30);
+}
+
+
+/* ==========================================
+   BALLOON GAME
+========================================== */
+
+let score = 0;
+
+function createBalloon(){
+
+  const game =
+    document.getElementById("game");
+
+  const balloon =
+    document.createElement("div");
+
+  balloon.className =
+    "balloon";
+
+  balloon.style.left =
+    Math.random()*90 + "%";
+
+  balloon.style.background =
+    "hsl(" +
+    Math.floor(Math.random()*360) +
+    ",55%,75%)";
+
+  balloon.style.animationDuration =
+    (4 + Math.random()*3) + "s";
+
+  balloon.addEventListener("click",()=>{
+
+    score++;
+
+    document.getElementById("score")
+      .textContent = score;
+
+    balloon.remove();
+
+    floatEmoji();
+
+    if(score % 5 === 0){
+
+      showModal(
+        "🎈 Amazing!",
+        "You popped " +
+        score +
+        " balloons! Birthday champion unlocked! 🏆💜"
+      );
+
+    }
+
+  });
+
+  game.appendChild(balloon);
+
+  setTimeout(()=>{
+    balloon.remove();
+  },8000);
+}
+
+setInterval(createBalloon,900);
+
+
+/* ==========================================
+   SECRET LETTER
+========================================== */
+
+function openLetter(){
+
+  const envelope =
+    document.getElementById("envelope");
+
+  envelope.classList.toggle("open");
+
+  if(envelope.classList.contains("open")){
+
+    for(let i=0;i<12;i++){
+      setTimeout(floatEmoji,i*80);
+    }
+
+  }
+}
+
+
+/* ==========================================
+   MODAL
+========================================== */
+
+function showModal(title,text){
+
+  document.getElementById("modalTitle")
+    .textContent = title;
+
+  document.getElementById("modalText")
+    .textContent = text;
+
+  document.getElementById("modal")
+    .classList.add("show");
+}
+
+
+function closeModal(){
+
+  document.getElementById("modal")
+    .classList.remove("show");
+}
+
+
+document.getElementById("modal")
+  .addEventListener("click",function(e){
+
+    if(e.target === this){
+      closeModal();
+    }
+
+  });
+
+
+/* ==========================================
+   MUSIC
+========================================== */
+
+let musicPlaying = false;
+
+function toggleMusic(){
+
+  const music =
+    document.getElementById("music");
+
+  const button =
+    document.getElementById("musicBtn");
+
+  if(!musicPlaying){
+
+    music.play()
+      .then(()=>{
+
+        musicPlaying = true;
+        button.textContent = "🔊";
+
+      })
+      .catch(()=>{
+
+        showModal(
+          "🎵 Music",
+          "Tap the music button again to allow the browser to start the music."
+        );
+
+      });
+
+  }else{
+
+    music.pause();
+
+    musicPlaying = false;
+
+    button.textContent = "🔇";
+  }
+}
+
+
+/* ==========================================
+   BIG CELEBRATION
+========================================== */
+
+function celebrate(){
+
+  for(let i=0;i<80;i++){
+
+    setTimeout(()=>{
+      floatEmoji();
+    },i*30);
+
+  }
+
+  showModal(
+    "🎉 Celebration Mode!",
+    "The birthday countdown may not be over yet... but the celebration can start right now! 💜🎂🧸"
+  );
+}
+
+
+/* ==========================================
+   ACTUAL BIRTHDAY MODE
+========================================== */
+
+function showBirthdayMode(){
+
+  document
+    .getElementById("birthdayMode")
+    .classList.add("show");
+
+  for(let i=0;i<100;i++){
+
+    setTimeout(()=>{
+      floatEmoji();
+    },i*30);
+
+  }
+
+}
+
+
+function closeBirthdayMode(){
+
+  document
+    .getElementById("birthdayMode")
+    .classList.remove("show");
+
+}
+
+
+/* ==========================================
+   ESCAPE KEY
+========================================== */
+
+document.addEventListener("keydown",(e)=>{
+
+  if(e.key === "Escape"){
+    closeModal();
+    closeBirthdayMode();
+  }
+
+});
+
+</script>
+
+</body>
+</html>
+```
